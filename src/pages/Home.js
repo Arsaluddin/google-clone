@@ -3,6 +3,7 @@ import './Home.css';
 import { Link } from "react-router-dom";
 import AppsIcon from '@mui/icons-material/Apps';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import Search from './Search.js'
 
 function Home() {
     return(
@@ -24,8 +25,10 @@ function Home() {
                 </div>
                  
                 <div className="home_body">
-                  <img src="/images/google.png"/>
-
+                  <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt=".."/>
+                  <div className="home_inputcontainer">
+                     <Search/>
+                  </div>
                 </div> 
 
             </div>

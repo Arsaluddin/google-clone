@@ -39,5 +39,9 @@
     height: 200px;
 }
 .home_body{
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
 }
