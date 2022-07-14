@@ -4,20 +4,23 @@ import API_KEY from "./keys";
 const context_key = "7e7773ff1c0129017";
 
 const useGoogleSearch = (term) => {
-    const [data, setData] = useState('');
+    const [data, setData] = useState();
 
     useEffect(() =>{
-      const fetchdata = () => {
-        fetch('https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${context_key}&q=${term}')
+      const fetchdata = async() => {
+        fetch(`https://www.googleapis.com/customsearch/v1?key=${API_KEY}&cx=${context_key}&q=${term}
+        `)
         .then(responce => responce.json())
         .then(result => {
-            setData(result);
+            setData(result)
         })        
       } 
 
       fetchdata();
-      return {data}
+      
     },[term])
+
+    return { data }
     
 };
 
