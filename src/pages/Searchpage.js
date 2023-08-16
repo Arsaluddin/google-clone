@@ -68,12 +68,12 @@ function Searchpage() {
               </div>
               {true && (
                 <div className="searchpage_results">
-                    <p className="searchpage_resultcount">
+                    <p className="searchpage_resultcount"> 
                         About {data?.searchInformation.formattedTotalResults} results 
-                        ({data?.searchInformation.formattedSearchTime}  in Seconds) for {term}
-                    </p>
-                    {data?.items.map(item=> (
-                        <div className="searchpage_result">
+                        ({data?.searchInformation.formattedSearchTime}  in Seconds) for {term} 
+                     </p>
+                     {data?.items.map((item,i)=> (
+                        <div className="searchpage_result" key={i}>
                            <a href={item.link}>
                             {item.displayLink}
                            </a>
