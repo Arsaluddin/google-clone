@@ -96,4 +96,3 @@ function Searchpage() {
 
 export default Searchpage;
 
-// AIzaSyCJkeV5jItUtpdTORAoPThuV-II_DMSIqU
